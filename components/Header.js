@@ -15,7 +15,7 @@ function Header() {
         <p className="link">Images</p>
         <div className="relative w-10 h-10 rounded-full cursor-pointer group hover:bg-slate-100">
           <Squares2X2Icon className="absolute p-2 text-gray-600 group-hover:opacity-0" />
-          <SquaresPlusIcon className="absolute p-2 text-gray-600 opacity-0 group-hover:opacity-100" />
+          <SquaresPlusIcon className="absolute p-2 text-gray-600 opacity-0 group-hover:opacity-100 hover:scale-110" />
         </div>
         <Avatar url={"/mario.jpeg"} />
       </div>

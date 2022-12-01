@@ -4,7 +4,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 function Body() {
   return (
-    <form className="flex flex-col items-center justify-center mt-40">
+    <form className="flex flex-col items-center justify-center flex-grow w4/5">
       <Image src={"/google.avif"} height={100} width={300} alt="logo" />
       {/* input wrapper */}
       <div className="flex items-center w-full max-w-md p-2 px-5 py-3 mt-6 border border-gray-200 rounded-full hover:shadow-airbnb focus-within:shadow-airbnb sm:max-w-xl lg:max-w-2xl hover:border-gray-100">
