@@ -6,7 +6,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        airbnb: "rgba(0, 0, 0, 0.15) 0px 2px 8px;",
+      },
+    },
   },
   plugins: [],
 };

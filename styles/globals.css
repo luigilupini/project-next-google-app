@@ -6,4 +6,7 @@
   .link {
     @apply cursor-pointer hover:underline hover:underline-offset-2;
   }
+  .btn {
+    @apply bg-[#F8F9FA] text-[#3c4043] py-2 px-5 ring-gray-200 text-sm hover:ring-1 focus:outline-none active:ring-gray-300 border-0 border-inherit rounded hover:shadow;
+  }
 }

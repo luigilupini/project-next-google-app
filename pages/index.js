@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Header from "../components/Header";
+import Body from "../components/Body";
 
 export default function Home() {
   return (
@@ -7,10 +7,8 @@ export default function Home() {
       <Head>
         <title>Google</title>
       </Head>
+      <Body />
 
-      <Header />
-
-      {/* Body */}
       {/* Footer */}
     </div>
   );
