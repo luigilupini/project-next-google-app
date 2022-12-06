@@ -38,6 +38,7 @@ function SearchHeader() {
             onChange={(e) => setXIcon(e.target.value)}
             type="text"
             ref={searchInputRef}
+            defaultValue={router.query.term}
             className="flex-grow p-1 ml-2 focus:outline-none"
           />
           {xIcon && (
