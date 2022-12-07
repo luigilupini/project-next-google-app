@@ -1,8 +1,20 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useRef } from "react";
 
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
-function Body({ onSearch, searchInputRef }) {
+function Body() {
+  const router = useRouter();
+  const searchInputRef = useRef(null);
+
+  const searchHandler = (e) => {
+    e.preventDefault(); // stop default behavior
+    const term = searchInputRef.current.value;
+    if (!term) return; // exit logic
+    // otherwise, forward to `pages/search.js` with the query param `term`:
+    router.push(`/search?term=${term}`);
+  };
   return (
     <form className="flex flex-col items-center justify-center flex-grow w4/5">
       <Image src={"/google.avif"} height={100} width={300} alt="logo" />
@@ -18,10 +30,10 @@ function Body({ onSearch, searchInputRef }) {
       </div>
       {/* buttons */}
       <div className="flex gap-4 mt-8">
-        <button className="btn" onClick={onSearch}>
+        <button className="btn" onClick={searchHandler}>
           Google Search
         </button>
-        <button className="btn" onClick={onSearch}>
+        <button className="btn" onClick={searchHandler}>
           I&apos;m Feeling Lucky
         </button>
       </div>
